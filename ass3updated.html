@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular & Recommended Books</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Bree Serif", serif;
+            font-weight: 300;
+        }
+
+    
+        body{
+            background-color: rgb(19, 18, 18);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one{
+            background-color: #222;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            padding-bottom: 0px;
+        }
+
+        .main{
+            display:flex;
+            border-radius: 15px;
+            padding: 15px;
+            width: 350px;
+            height: 190px;
+            margin-bottom: 10px;
+            background-color: antiquewhite;
+            color: black;
+        }
+
+        .main2{
+            display:flex;
+            background-color:#222;
+            border-radius: 15px;
+            padding: 15px;
+            width: 350px;
+            height: 170px;
+            margin-bottom: 10px;
+        }
+
+        .text{
+            display:flex;
+            flex-direction: column;
+            width: 200px;
+            height: 150px;
+        }
+
+        .bookimage{
+            background-image: url("book1.png");
+            width:100px;
+            height:150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+
+        .book2image{
+            background-image: url("book2.png");
+            width:100px;
+            height:150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+
+        .book3image{
+            background-image: url("book3.png");
+            width:100px;
+            height:150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+
+        .bookname{
+            margin:0 0 10px 8px;
+            color: white;
+        }
+
+        .bookname1{
+            margin:0 0 10px 8px;
+            color: rgb(41, 41, 240);
+        }
+
+        .author{
+            font-size: 13px;
+            color: blue;
+            margin:0 0 10px 8px;
+        }
+
+        .author1{
+            font-size: 13px;
+            color: blue;
+            margin:0 0 10px 8px;
+        }
+
+        .subtitle{
+            font-size: 15px;
+            margin:0 0 13px 8px;
+            color: white;
+        }
+
+        .subtitle1{
+            font-size: 15px;
+            margin:0 0 13px 8px;
+            color: black;
+        }
+
+        .btn{
+            background-color: rgba(0, 76, 255, 0.727);
+            width: 100px;
+            margin-left: 8px;
+            color: white;
+            border:none;
+            padding:5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+
+        h1,h2{
+            color: white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <h1>Popular Book</h1>
+
+        <div class="main">
+            <div class="bookimage"></div>
+
+            <div class="text">
+                <h2 class="bookname1">Wings of Fire</h2>
+                <p class="subtitle1">An Autobiography of Abdul Kalam</p>
+                <p class="author1">by Arun Tiwari</p>
+
+                <!-- Link to detail page -->
+                <a href="wings-of-fire.html" class="btn">Read Now</a>
+            </div>
+        </div>
+
+        <h2>Recommended Books</h2>
+
+        <div class="main2">
+            <div class="book2image"></div>
+            <div class="text">
+                <h2 class="bookname">The 3 mistakes of my life</h2>
+                <p class="subtitle">Indian Author</p>
+                <p class="subtitle">by Chetan Bhagat</p>
+                <button class="btn">Read Now</button>
+            </div>
+        </div>
+
+        <div class="main2">
+            <div class="book3image"></div>
+            <div class="text">
+                <h2 class="bookname">Harry Potter</h2>
+                <p class="subtitle">and the sorcerer's stone</p>
+                <p class="subtitle">by J.K.Rowling</p>
+                <button class="btn">Read Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

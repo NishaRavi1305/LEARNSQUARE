@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Light</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #222;
+      font-family: Arial, sans-serif;
+    }
+
+    .traffic-box {
+      width: 140px;
+      padding: 15px;
+      background-color: #333;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
+
+    .light {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background-color: #111;
+      opacity: 0.3;
+      transition: opacity 0.2s;
+    }
+
+    .red.on {
+      background-color: red;
+      opacity: 1;
+    }
+
+    .yellow.on {
+      background-color: yellow;
+      opacity: 1;
+    }
+
+    .green.on {
+      background-color: limegreen;
+      opacity: 1;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    #stopBtn {
+      background-color: red;
+      color: white;
+    }
+
+    #waitBtn {
+      background-color: gold;
+      color: black;
+    }
+
+    #startBtn {
+      background-color: limegreen;
+      color: white;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="traffic-box">
+    <div id="red" class="light red"></div>
+    <div id="yellow" class="light yellow"></div>
+    <div id="green" class="light green"></div>
+  </div>
+
+  <div class="buttons">
+    <button id="stopBtn">STOP</button>
+    <button id="waitBtn">WAIT</button>
+    <button id="startBtn">START</button>
+  </div>
+
+  <script>
+    const redLight = document.getElementById("red");
+    const yellowLight = document.getElementById("yellow");
+    const greenLight = document.getElementById("green");
+
+    const stopBtn = document.getElementById("stopBtn");
+    const waitBtn = document.getElementById("waitBtn");
+    const startBtn = document.getElementById("startBtn");
+
+    function resetLights() {
+      redLight.classList.remove("on");
+      yellowLight.classList.remove("on");
+      greenLight.classList.remove("on");
+    }
+
+    stopBtn.addEventListener("click", function () {
+      resetLights();
+      redLight.classList.add("on");
+    });
+
+    waitBtn.addEventListener("click", function () {
+      resetLights();
+      yellowLight.classList.add("on");
+    });
+
+    startBtn.addEventListener("click", function () {
+      resetLights();
+      greenLight.classList.add("on");
+    });
+  </script>
+
+</body>
+</html>
